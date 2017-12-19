@@ -8,7 +8,9 @@
 
 import Foundation
 
-class Product {
+class Product:NSCopying {
+    
+    
     
     private(set) var name:String
     private(set) var description:String
@@ -37,5 +39,11 @@ class Product {
     
     var stockValue:Double{
         get { return price * Double(stockLevel) }
+    }
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        return Product(name: self.name,
+                       description: self.description,
+                       category: self.category, price: self.price, stockLevel: self.stockLevel)
     }
 }
