@@ -14,5 +14,10 @@
 > >  SportsStore
 
 #### 2、原型模式
-
-
+> <https://juejin.im/post/5a37d0e1f265da432840f6a3>
+> 
+> 02 原型模式
+> 
+> > PrototypePlayground.playground
+> > 
+> > SportsStore(增加Logger类,使用原型模式)
