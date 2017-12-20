@@ -25,3 +25,12 @@
 > > SportsStore(增加Logger类,使用原型模式)
 
 #### 3、单例模式
+> <https://juejin.im/post/5a39213d6fb9a0450e763e96>
+> 
+> 03 单例模式
+> 
+> > Singleton OSX命令行项目
+> > 
+> > SportsStore
+
+#### 4、对象池模式
