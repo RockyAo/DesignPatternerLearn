@@ -13,6 +13,7 @@ final class BackupServer {
     static let sharedServer:BackupServer = BackupServer(name: "MainBackupServer")
     
     let name:String
+    
     private var data = [DataItem]()
     
     private let arrayQ = DispatchQueue(label: "arrayQ")

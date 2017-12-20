@@ -8,24 +8,47 @@
 
 import Foundation
 
-class Logger<T> where T:NSCopying {
+final class Logger {
     
-    var dataItems:[T] = []
+    static let shared:Logger = Logger(callBack: { (item:Product) in
+        print("change \(item.name) \(item.stockLevel) items in stock")
+    })
     
-    var callBack:(T)->Void
+    private var dataItems:[Product] = []
     
-    init(callBack:@escaping (T)->Void) {
+    private var callBack:(Product)->Void
+    
+    private let arrayQ = DispatchQueue(label: "arrayQ", qos: DispatchQoS.default, attributes: DispatchQueue.Attributes.concurrent)
+    
+    private let callBackQ = DispatchQueue(label: "callBackQ")
+    
+    init(callBack:@escaping (Product)->Void,protect:Bool = true) {
         self.callBack = callBack
+        
+        if protect {
+            self.callBack = { (item:Product) in
+                self.callBackQ.sync {
+                    callBack(item)
+                }
+            }
+        }
     }
     
-    func logItem(_ item:T)  {
-        dataItems.append(item.copy() as! T)
-        callBack(item)
+    func logItem(_ item:Product)  {
+        
+        let workItem = DispatchWorkItem(qos: DispatchQoS.default, flags: .barrier) {
+            self.dataItems.append(item.copy() as! Product)
+            self.callBack(item)
+        }
+        
+        arrayQ.async(execute: workItem)
     }
     
-    func processItems(callBack:(T)->Void) {
-        for item in dataItems{
-            callBack(item)
+    func processItems(callBack:(Product)->Void) {
+        arrayQ.sync {
+            for item in dataItems{
+                callBack(item)
+            }
         }
     }
 }

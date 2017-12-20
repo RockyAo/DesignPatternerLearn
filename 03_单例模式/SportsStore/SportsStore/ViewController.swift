@@ -8,17 +8,12 @@
 
 import UIKit
 
-var handler = { (p:Product) in
-    print("change : \(p.name) \(p.stockLevel) items in stock")
-}
-
-
 class ViewController: UIViewController,UITableViewDataSource {
     
     @IBOutlet weak var totalStockLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    let logger = Logger<Product>(callBack:handler)
+    
     
     var products = [
         
@@ -89,7 +84,7 @@ class ViewController: UIViewController,UITableViewDataSource {
                         
                         cell.stockStepper.value = Double(product.stockLevel)
                         cell.stockField.text = String(product.stockLevel)
-                        logger.logItem(product)
+                        Logger.shared.logItem(product)
                     }
                     break;
                 }
