@@ -34,3 +34,22 @@
 > > SportsStore
 
 #### 4、对象池模式
+> <https://juejin.im/post/5a3a788c51882512ae12ceca>
+> 
+> 04 对象池模式及其变体模式
+> 
+> >对象池模式
+> >
+> > > ObjectPool
+> > > 
+> > > SportsStore
+> > 
+> > 对象池变体模式
+> > 
+> > >ObjectPool
+> > >
+> > >ObjectPool(弹性对象)
+> > >
+> > >ObjectPool(对象分配策略)
+> > >
+> > >SportsStore
