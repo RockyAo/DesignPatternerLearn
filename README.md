@@ -51,5 +51,3 @@
 > > >ObjectPool(弹性对象)
 > > >
 > > >ObjectPool(对象分配策略)
-> > >
-> > >SportsStore
