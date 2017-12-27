@@ -14,8 +14,3 @@ var car = Car(carType: .sports)
 
 car.printDetail()
 
-DispatchQueue.global().async {
-    DispatchQueue.main.sync {
-        print("啦啦啦阿拉啊")
-    }
-}
