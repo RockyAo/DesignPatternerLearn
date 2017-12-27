@@ -53,3 +53,21 @@
 > > >ObjectPool(对象分配策略)
 
 #### 5、工厂模式
+
+> <https://juejin.im/post/5a4106d86fb9a0451c3aa2e2>
+> 
+> 05 工厂模式
+> 
+> > 简单工厂模式
+> > 
+> > > FactoryMethod
+> > > 
+> > > SportsStore
+> > 
+> > 抽象工厂
+> > >
+> > >AbstractFactory
+> > >
+> > >AbstractFactory(隐藏抽象工厂类)
+> > >
+> > >SportsStore
