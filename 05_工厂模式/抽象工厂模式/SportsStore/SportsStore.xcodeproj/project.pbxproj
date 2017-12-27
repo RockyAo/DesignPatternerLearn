@@ -20,6 +20,9 @@
 		5C4D19A91FE7B7D900943355 /* SportsStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D19A81FE7B7D900943355 /* SportsStoreUITests.swift */; };
 		5C4D19B91FE7BF6200943355 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D19B81FE7BF6200943355 /* ProductTableViewCell.swift */; };
 		5C4D19BB1FE7CEDA00943355 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D19BA1FE7CEDA00943355 /* Product.swift */; };
+		5C9269921FF38C3F002DB9C5 /* StockValueImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9269911FF38C3F002DB9C5 /* StockValueImplementation.swift */; };
+		5C9269941FF38CF9002DB9C5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9269931FF38CF9002DB9C5 /* Utils.swift */; };
+		5C9269961FF38E51002DB9C5 /* StockValueFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9269951FF38E51002DB9C5 /* StockValueFactories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		5C4D19AA1FE7B7D900943355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C4D19B81FE7BF6200943355 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		5C4D19BA1FE7CEDA00943355 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		5C9269911FF38C3F002DB9C5 /* StockValueImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueImplementation.swift; sourceTree = "<group>"; };
+		5C9269931FF38CF9002DB9C5 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5C9269951FF38E51002DB9C5 /* StockValueFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueFactories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 		5C4D19871FE7B7D800943355 /* SportsStore */ = {
 			isa = PBXGroup;
 			children = (
+				5C9269931FF38CF9002DB9C5 /* Utils.swift */,
 				5C3DB47F1FED425100F07665 /* Network(对象池) */,
 				5C4D19B81FE7BF6200943355 /* ProductTableViewCell.swift */,
 				5C4D19881FE7B7D800943355 /* AppDelegate.swift */,
@@ -129,6 +136,8 @@
 				5C4D19BA1FE7CEDA00943355 /* Product.swift */,
 				5C3DB4471FE93B3300F07665 /* Logger.swift */,
 				5C3DB4841FED458000F07665 /* ProductDataStore.swift */,
+				5C9269911FF38C3F002DB9C5 /* StockValueImplementation.swift */,
+				5C9269951FF38E51002DB9C5 /* StockValueFactories.swift */,
 			);
 			path = SportsStore;
 			sourceTree = "<group>";
@@ -288,8 +297,11 @@
 				5C3DB4821FED425100F07665 /* NetworkPool.swift in Sources */,
 				5C3DB4851FED458000F07665 /* ProductDataStore.swift in Sources */,
 				5C3DB4481FE93B3300F07665 /* Logger.swift in Sources */,
+				5C9269961FF38E51002DB9C5 /* StockValueFactories.swift in Sources */,
 				5C4D198B1FE7B7D800943355 /* ViewController.swift in Sources */,
 				5C4D19BB1FE7CEDA00943355 /* Product.swift in Sources */,
+				5C9269941FF38CF9002DB9C5 /* Utils.swift in Sources */,
+				5C9269921FF38C3F002DB9C5 /* StockValueImplementation.swift in Sources */,
 				5C4D19891FE7B7D800943355 /* AppDelegate.swift in Sources */,
 				5C4D19B91FE7BF6200943355 /* ProductTableViewCell.swift in Sources */,
 				5C3DB4831FED425100F07665 /* NetworkConnection.swift in Sources */,

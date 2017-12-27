@@ -96,7 +96,12 @@ class ViewController: UIViewController,UITableViewDataSource {
                 totals.1 + product.stockValue
             )
         }
-        totalStockLabel.text = "\(finalTotals.0) Products in Stock." + "Total value:\(finalTotals.1)"
+        
+        let factory = StockTotalFactory.getFactory(curr: .GBP)
+        guard let totalAmount = factory.converter?.convertTotal(finalTotals.1),
+            let formatted = factory.formatter?.formatTotal(totalAmount) else { return }
+        
+        totalStockLabel.text = "\(finalTotals.0) Products in Stock." + "Total value:\(formatted)"
     }
 }
 
