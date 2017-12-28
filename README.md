@@ -71,3 +71,16 @@
 > > >AbstractFactory(隐藏抽象工厂类)
 > > >
 > > >SportsStore
+
+#### 6、建造者模式
+
+> <https://juejin.im/post/5a44b5ee6fb9a0450809f670>
+> > 06 建造者模式
+> > 
+> > > Builder
+> > > 
+> > > SportsStore
+> > > 
+
+## 结构型模式
+
