@@ -37,7 +37,7 @@ for count in 0..<100{
     queue.async(group: group, execute: workItem)
 }
 
-let result = group.wait(wallTimeout: DispatchWallTime)
+let result = group.wait(wallTimeout: DispatchWallTime.distantFuture)
 
 switch result{
 case .success:

@@ -84,3 +84,7 @@
 
 ## 结构型模式
 
+#### 1、适配器模式
+
+* Adapter
+* SportsStore

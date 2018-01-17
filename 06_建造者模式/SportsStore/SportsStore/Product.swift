@@ -14,7 +14,7 @@ enum UpsellOpportunities {
     case SoccerVideos
 }
 
-class Product:NSCopying {
+class Product:NSCopying{
     
     
     class func createProduct(_ name:String,
