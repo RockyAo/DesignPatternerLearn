@@ -11,11 +11,11 @@ import Foundation
 //var clearChannel = LandLine()
 //var secureChannel = SecureLandLine()
 
-var bridge = CommunicatorBridge(channel: LandLineChannel())
+var bridge = CommunicatorBridge(channel: WirelessChannel())
 
-var comms = Communicator(clearChannel: bridge, secureChannel: bridge)
+var comms = Communicator(clearChannel: bridge, secureChannel: bridge, priorityChannel: bridge)
 
 
 comms.sendSecureMessage("hello!")
 comms.sendCleartextMessage("This is a secret")
-
+comms.sendPriorityMessage("This is important")

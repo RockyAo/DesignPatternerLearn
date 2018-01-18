@@ -8,7 +8,8 @@
 
 import Foundation
 
-class CommunicatorBridge: ClearMessageChannel,SecureMessageChannel {
+class CommunicatorBridge: ClearMessageChannel,SecureMessageChannel,PriorityMessageChannel {
+  
     
     private var channel:Channel
     
@@ -24,6 +25,10 @@ class CommunicatorBridge: ClearMessageChannel,SecureMessageChannel {
     func sendEncryptedMessage(encryptedText: String) {
         let msg = EncryptedMessage(message: encryptedText)
         sendMessage(msg)
+    }
+    
+    func sendPriority(message: String) {
+        sendMessage(PriorityMessage(message: message))
     }
     
     private func sendMessage(_ msg:Message){
