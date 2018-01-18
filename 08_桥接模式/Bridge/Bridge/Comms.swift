@@ -16,13 +16,22 @@ protocol SecureMessageChannel {
     func sendEncryptedMessage(encryptedText:String)
 }
 
+//protocol PriorityMessageChannel {
+//    func sendPriority(message:String)
+//}
+
 class Communicator {
     private let clearChannel:ClearMessageChannel
     private let secureChannel:SecureMessageChannel
+//    private let priorityChannel:PriorityMessageChannel
     
-    init(clearChannel:ClearMessageChannel,secureChannel:SecureMessageChannel) {
+    init(clearChannel:ClearMessageChannel,
+         secureChannel:SecureMessageChannel){
+//         priorityChannel:PriorityMessageChannel) {
+        
         self.clearChannel = clearChannel
         self.secureChannel = secureChannel
+//        self.priorityChannel = priorityChannel
     }
     
     func sendCleartextMessage(_ message:String)  {
@@ -32,4 +41,8 @@ class Communicator {
     func sendSecureMessage(_ message:String)  {
         secureChannel.sendEncryptedMessage(encryptedText: message)
     }
+    
+//    func sendPriorityMessage(_ message:String) {
+//        priorityChannel.sendPriority(message: message)
+//    }
 }

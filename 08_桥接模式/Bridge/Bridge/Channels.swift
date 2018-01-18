@@ -8,26 +8,23 @@
 
 import Foundation
 
-class LandLine: ClearMessageChannel {
-    func send(message: String) {
-        print("LandLine:" + message )
-    }
+protocol Channel {
+    func sendMessage(_ message:Message)
 }
 
-class SecureLandLine: SecureMessageChannel {
-    func sendEncryptedMessage(encryptedText: String) {
-        print("SecureLandLine:" + encryptedText)
+class LandLineChannel: Channel {
+    func sendMessage(_ message: Message) {
+        print("LandLine:" + message.contentToSend )
     }
+    
 }
 
-class Wireless: ClearMessageChannel {
-    func send(message: String) {
-        print("Wireless:" + message)
+
+class WirelessChannel: Channel {
+    func sendMessage(_ message: Message) {
+        print("Wireless:" + message.contentToSend)
     }
+
 }
 
-class SecureWireless: SecureMessageChannel {
-    func sendEncryptedMessage(encryptedText: String) {
-        print("Wireless" + encryptedText)
-    }
-}
+

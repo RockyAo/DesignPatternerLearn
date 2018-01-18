@@ -10,6 +10,8 @@
 		5CEB24D4201095690049ABD5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB24D3201095690049ABD5 /* main.swift */; };
 		5CEB24DB201095730049ABD5 /* Comms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB24DA201095730049ABD5 /* Comms.swift */; };
 		5CEB24DD201096520049ABD5 /* Channels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB24DC201096520049ABD5 /* Channels.swift */; };
+		5CEB24DF20109D960049ABD5 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB24DE20109D960049ABD5 /* Messages.swift */; };
+		5CEB24E120109F310049ABD5 /* CommunicatorBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB24E020109F310049ABD5 /* CommunicatorBridge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,8 @@
 		5CEB24D3201095690049ABD5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5CEB24DA201095730049ABD5 /* Comms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comms.swift; sourceTree = "<group>"; };
 		5CEB24DC201096520049ABD5 /* Channels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
+		5CEB24DE20109D960049ABD5 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		5CEB24E020109F310049ABD5 /* CommunicatorBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicatorBridge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				5CEB24D3201095690049ABD5 /* main.swift */,
 				5CEB24DA201095730049ABD5 /* Comms.swift */,
 				5CEB24DC201096520049ABD5 /* Channels.swift */,
+				5CEB24DE20109D960049ABD5 /* Messages.swift */,
+				5CEB24E020109F310049ABD5 /* CommunicatorBridge.swift */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
@@ -127,7 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CEB24DD201096520049ABD5 /* Channels.swift in Sources */,
+				5CEB24DF20109D960049ABD5 /* Messages.swift in Sources */,
 				5CEB24D4201095690049ABD5 /* main.swift in Sources */,
+				5CEB24E120109F310049ABD5 /* CommunicatorBridge.swift in Sources */,
 				5CEB24DB201095730049ABD5 /* Comms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

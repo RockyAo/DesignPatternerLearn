@@ -8,10 +8,12 @@
 
 import Foundation
 
-var clearChannel = LandLine()
-var secureChannel = SecureLandLine()
+//var clearChannel = LandLine()
+//var secureChannel = SecureLandLine()
 
-var comms = Communicator(clearChannel: clearChannel, secureChannel: secureChannel)
+var bridge = CommunicatorBridge(channel: LandLineChannel())
+
+var comms = Communicator(clearChannel: bridge, secureChannel: bridge)
 
 
 comms.sendSecureMessage("hello!")
