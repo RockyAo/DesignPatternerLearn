@@ -8,20 +8,40 @@
 
 import Foundation
 
-protocol Channel {
-    func sendMessage(_ message:Message)
+
+class Channel {
+    
+    enum Channels {
+        case landline
+        case wireless
+        case satellite
+    }
+    
+    class func getChannel(with channelType:Channels) -> Channel{
+        switch channelType {
+        case .landline:
+            return LandLineChannel()
+        case .wireless:
+            return WirelessChannel()
+        case .satellite:
+            return SatelliteChannel()
+        }
+    }
+    
+    func sendMessage(_ message: Message) {
+        fatalError("not implement")
+    }
 }
 
 class LandLineChannel: Channel {
-    func sendMessage(_ message: Message) {
+    override func sendMessage(_ message: Message) {
         print("LandLine:" + message.contentToSend )
     }
     
 }
 
-
 class WirelessChannel: Channel {
-    func sendMessage(_ message: Message) {
+    override func sendMessage(_ message: Message) {
         print("Wireless:" + message.contentToSend)
     }
 

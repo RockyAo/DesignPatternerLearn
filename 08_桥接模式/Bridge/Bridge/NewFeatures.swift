@@ -9,7 +9,7 @@
 import Foundation
 
 class SatelliteChannel: Channel {
-    func sendMessage(_ message: Message) {
+    override func sendMessage(_ message: Message) {
         print("Satellite" + message.contentToSend )
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 //var clearChannel = LandLine()
 //var secureChannel = SecureLandLine()
 
-var bridge = CommunicatorBridge(channel: WirelessChannel())
+var bridge = CommunicatorBridge(channel: .wireless)
 
 var comms = Communicator(clearChannel: bridge, secureChannel: bridge, priorityChannel: bridge)
 

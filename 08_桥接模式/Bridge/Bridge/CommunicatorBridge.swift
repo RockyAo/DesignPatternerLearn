@@ -13,8 +13,8 @@ class CommunicatorBridge: ClearMessageChannel,SecureMessageChannel,PriorityMessa
     
     private var channel:Channel
     
-    init(channel:Channel) {
-        self.channel = channel
+    init(channel:Channel.Channels) {
+        self.channel = Channel.getChannel(with: channel)
     }
     
     func send(message: String) {
