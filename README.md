@@ -88,3 +88,8 @@
 
 * Adapter
 * SportsStore
+
+#### 2、桥接模式
+
+* Bridge
+* SportsStore
