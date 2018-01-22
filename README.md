@@ -93,3 +93,9 @@
 
 * Bridge
 * SportsStore
+
+#### 3、装饰器模式
+
+* Decorator
+* Decorator变体
+* SportsStore
