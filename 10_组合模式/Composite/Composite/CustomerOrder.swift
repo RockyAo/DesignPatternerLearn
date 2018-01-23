@@ -11,22 +11,17 @@ import Foundation
 class CustomerOrder {
     
     let customer:String
-    let parts:[Part]
-    let compositeParts:[CompositePart]
+    let parts:[CarPart]
     
-    init(customer:String,parts:[Part],composites:[CompositePart]) {
+    init(customer:String,parts:[CarPart]) {
         self.customer = customer
         self.parts = parts
-        self.compositeParts = composites
     }
     
     var totalPrice:Float{
-        let partReducer = { (subtotal:Float,part:Part) -> Float in return subtotal + part.price }
-        
-        let total = parts.reduce(0, partReducer)
-        
-        return compositeParts.reduce(total, { (subtotal, cparts) -> Float in
-            return cparts.parts.reduce(subtotal, partReducer)
+    
+        return parts.reduce(0, { (subtotal, cparts) -> Float in
+            return subtotal + cparts.price
         })
     }
     
