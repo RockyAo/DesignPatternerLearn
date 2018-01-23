@@ -8,26 +8,33 @@
 
 import Foundation
 
-let map = TreasureMap()
-let ship = PirateShip()
-let crew = PirateCrew()
+//let map = TreasureMap()
+//let ship = PirateShip()
+//let crew = PirateCrew()
+//
+//let treasureLocation = map.findTreasure(by: .galleon)
+//let sequence:[Character] = ["A","B","C","D","E","F","G"]
+//let eastWestPos = sequence.filter { (c) -> Bool in
+//    if c == treasureLocation.gridLetter {
+//        return true
+//    }
+//    return false
+//}.count
+//
+//let shipTarget = PirateShip.ShipLocation(northSouth: Int(treasureLocation.gridNumber), eastWest: eastWestPos)
+//
+//ship.moveToLocation(shipTarget) { (location) in
+//    crew.performAction(.attack_ship, callBack: { (prize) in
+//        print("Prize: \(prize) pieces of eight")
+//    })
+//}
+//
+//////使用等待控制台输入的方式保持应用运行
+//FileHandle.standardInput.availableData
 
-let treasureLocation = map.findTreasure(by: .galleon)
-let sequence:[Character] = ["A","B","C","D","E","F","G"]
-let eastWestPos = sequence.filter { (c) -> Bool in
-    if c == treasureLocation.gridLetter {
-        return true
-    }
-    return false
-}.count
+let facade = PirateFacade()
 
-let shipTarget = PirateShip.ShipLocation(northSouth: Int(treasureLocation.gridNumber), eastWest: eastWestPos)
-
-ship.moveToLocation(shipTarget) { (location) in
-    crew.performAction(.attack_ship, callBack: { (prize) in
-        print("Prize: \(prize) pieces of eight")
-    })
+if let prize = facade.getTreasure(by: .ship) {
+    print("Prize ：\(prize) pieces of eight")
 }
 
-////使用等待控制台输入的方式保持应用运行
-FileHandle.standardInput.availableData

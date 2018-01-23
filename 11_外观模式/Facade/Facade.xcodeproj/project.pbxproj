@@ -11,6 +11,7 @@
 		5C1401A020174E6B00C6BEC6 /* TreasureMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14019F20174E6B00C6BEC6 /* TreasureMap.swift */; };
 		5C1401A220174F2900C6BEC6 /* PirateShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1401A120174F2900C6BEC6 /* PirateShip.swift */; };
 		5C1401A4201750A000C6BEC6 /* PirateCrew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1401A3201750A000C6BEC6 /* PirateCrew.swift */; };
+		5C1401A6201759B300C6BEC6 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1401A5201759B300C6BEC6 /* Facade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		5C14019F20174E6B00C6BEC6 /* TreasureMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureMap.swift; sourceTree = "<group>"; };
 		5C1401A120174F2900C6BEC6 /* PirateShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PirateShip.swift; sourceTree = "<group>"; };
 		5C1401A3201750A000C6BEC6 /* PirateCrew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PirateCrew.swift; sourceTree = "<group>"; };
+		5C1401A5201759B300C6BEC6 /* Facade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				5C14019F20174E6B00C6BEC6 /* TreasureMap.swift */,
 				5C1401A120174F2900C6BEC6 /* PirateShip.swift */,
 				5C1401A3201750A000C6BEC6 /* PirateCrew.swift */,
+				5C1401A5201759B300C6BEC6 /* Facade.swift */,
 			);
 			path = Facade;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C14019920174E5D00C6BEC6 /* main.swift in Sources */,
+				5C1401A6201759B300C6BEC6 /* Facade.swift in Sources */,
 				5C1401A4201750A000C6BEC6 /* PirateCrew.swift in Sources */,
 				5C1401A020174E6B00C6BEC6 /* TreasureMap.swift in Sources */,
 				5C1401A220174F2900C6BEC6 /* PirateShip.swift in Sources */,
