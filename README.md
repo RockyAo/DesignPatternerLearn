@@ -99,3 +99,7 @@
 * Decorator
 * Decorator变体
 * SportsStore
+
+#### 4、组合模式
+
+* Composite
