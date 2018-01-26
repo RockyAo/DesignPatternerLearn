@@ -16,3 +16,7 @@ cal.subtract(2)
 
 print("Total : \(cal.total)")
 
+for _ in 0..<3 {
+    cal.undo()
+    print("Undo called . Total: \(cal.total)")
+}
