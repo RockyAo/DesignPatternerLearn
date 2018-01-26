@@ -14,19 +14,8 @@ let messages = [
     Message(from: "pete@example.com", to: "all@example", subject: "Priority: All-hands Meeting")
 ]
 
-let localT = LocalTransmitter()
-let remoteT = RemoteTAransmitter()
-
-messages.forEach { (msg) in
-    if let index = msg.from.index(of: "@") {
-        
-        if msg.to.hasSuffix(String(msg.from[Range(uncheckedBounds: (lower: index, upper: msg.from.endIndex))])){
-            localT.sendMessage(msg)
-        }else{
-            remoteT.sendMessage(msg)
-        }
-    }else{
-        
-        print("Error: cannot send message to \(msg.from)")
-    }
+if let chain = Transmitter.createChain() {
+    messages.forEach({ (msg) in
+        chain.sendMessage(msg)
+    })
 }
