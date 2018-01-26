@@ -24,5 +24,4 @@ ss1.setValue(coord: Coordinate(col: "G", row: 23), value: 250)
 
 print("SS2 Total : \(ss2.total)")
 
-
-print("Cells create : \(ss1.grid.count + ss2.grid.count )")
+print("Cells create : \(1300 + ss1.grid.count + ss2.grid.count )")

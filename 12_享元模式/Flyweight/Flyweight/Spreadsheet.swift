@@ -45,29 +45,18 @@ class Cell {
 }
 
 class Spreadsheet {
-    var grid = Dictionary<Coordinate,Cell>()
+    var grid:Flyweight
     
     init() {
-        let letters:String = "AVCDEFGHIJKLMNOPQRSTUVWXYZ"
-        var stringIndex = letters.startIndex
-        let rows = 50
-        
-        repeat {
-            let colletter = letters[stringIndex]
-            stringIndex = letters.index(after: stringIndex)
-            for index in 1...rows{
-                let cell = Cell(col: colletter, row: index, val: index)
-                grid[cell.coordinate] = cell
-            }
-        } while stringIndex != letters.endIndex
+       grid = FlyweightFactory.createFlyweight()
     }
     
     func setValue(coord:Coordinate , value:Int)  {
-        grid[coord]?.value = value
+        grid[coord] = value
     }
     
     var total:Int{
-        return grid.values.reduce(0, { (total, cell) in  return total + cell.value })
+        return grid.total
     }
     
 }
