@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C1401F9201C9EA100C6BEC6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1401F8201C9EA100C6BEC6 /* main.swift */; };
 		5C140200201CA06700C6BEC6 /* Airplane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1401FF201CA06700C6BEC6 /* Airplane.swift */; };
+		5C140202201CAAA200C6BEC6 /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C140201201CAAA200C6BEC6 /* Mediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		5C1401F5201C9EA100C6BEC6 /* Mediator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mediator; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1401F8201C9EA100C6BEC6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5C1401FF201CA06700C6BEC6 /* Airplane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airplane.swift; sourceTree = "<group>"; };
+		5C140201201CAAA200C6BEC6 /* Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				5C1401F8201C9EA100C6BEC6 /* main.swift */,
 				5C1401FF201CA06700C6BEC6 /* Airplane.swift */,
+				5C140201201CAAA200C6BEC6 /* Mediator.swift */,
 			);
 			path = Mediator;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C140202201CAAA200C6BEC6 /* Mediator.swift in Sources */,
 				5C1401F9201C9EA100C6BEC6 /* main.swift in Sources */,
 				5C140200201CA06700C6BEC6 /* Airplane.swift in Sources */,
 			);

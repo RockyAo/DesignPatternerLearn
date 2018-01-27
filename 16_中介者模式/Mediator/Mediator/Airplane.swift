@@ -13,53 +13,45 @@ struct Position {
     var height:Int
 }
 
-class Airplane: Equatable {
+class Airplane: Peer {
+   
+    
     
     var name:String
     var currentPosition:Position
-    private var otherPlanes:[Airplane] = []
+    var mediator:Mediator
     
-    init(name:String,initialPos:Position) {
+    
+    init(name:String,initialPos:Position,mediator:Mediator) {
         self.name = name
         self.currentPosition = initialPos
-        
+        self.mediator = mediator
+        mediator.registerPeer(self)
     }
     
-    static func ==(lhs: Airplane, rhs: Airplane) -> Bool {
-        return lhs.name == rhs.name
-    }
     
-    func addPlanesInArea(planes:Airplane...)  {
-        otherPlanes.append(contentsOf: planes)
-    }
-    
-    func otherPlaneDidLand(plane:Airplane)  {
-        if let index = otherPlanes.index(of: plane) {
-            otherPlanes.remove(at: index)
-        }
-    }
-    
-    func otherPlaneDidChangePosition(plane:Airplane) -> Bool {
-        return plane.currentPosition.distanceFromRunway ==
-            self.currentPosition.distanceFromRunway && abs(plane.currentPosition.height - self.currentPosition.height) < 1000
+    func otherPlaneDidChangePosition(_ position: Position) -> Bool {
+        return position.distanceFromRunway == self.currentPosition.distanceFromRunway &&
+            abs(position.height - currentPosition.height) < 1000
     }
     
     func changePosition(newPosition:Position)  {
         self.currentPosition = newPosition
-        otherPlanes.forEach { (a) in
-            if a.otherPlaneDidChangePosition(plane: self) {
-                print("\(name) : too close ! Abort !")
-                return
-            }
+        
+        if mediator.changePosition(for: self, position: self.currentPosition) {
+            
+            print("\(name) : Too close ! Abort !")
+            
+            return
         }
+        
         print("\(name): Position changed")
     }
     
     func land() {
         self.currentPosition = Position(distanceFromRunway: 0, height: 0)
-        otherPlanes.forEach { (a) in
-            a.otherPlaneDidLand(plane: self)
-        }
-        print("\(name): landed")
+        mediator.unregisterPeer(self)
+        
+        print("\(name) landed")
     }
 }
