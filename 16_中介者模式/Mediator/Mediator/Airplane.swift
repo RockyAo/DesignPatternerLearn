@@ -14,13 +14,11 @@ struct Position {
 }
 
 class Airplane: Peer {
-   
-    
     
     var name:String
     var currentPosition:Position
     var mediator:Mediator
-    
+    let queue:DispatchQueue = DispatchQueue(label: "posQ", qos: DispatchQoS.default, attributes: DispatchQueue.Attributes.concurrent)
     
     init(name:String,initialPos:Position,mediator:Mediator) {
         self.name = name
@@ -31,27 +29,38 @@ class Airplane: Peer {
     
     
     func otherPlaneDidChangePosition(_ position: Position) -> Bool {
-        return position.distanceFromRunway == self.currentPosition.distanceFromRunway &&
-            abs(position.height - currentPosition.height) < 1000
+        
+        var result = false
+        
+        queue.sync {
+            result = position.distanceFromRunway == self.currentPosition.distanceFromRunway &&
+                abs(position.height - currentPosition.height) < 1000
+        }
+        
+        return result
     }
     
     func changePosition(newPosition:Position)  {
-        self.currentPosition = newPosition
-        
-        if mediator.changePosition(for: self, position: self.currentPosition) {
+        queue.sync(flags: DispatchWorkItemFlags.barrier) {
+            self.currentPosition = newPosition
             
-            print("\(name) : Too close ! Abort !")
+            if mediator.changePosition(for: self, position: self.currentPosition) {
+                
+                print("\(name) : Too close ! Abort !")
+                
+                return
+            }
             
-            return
+            print("\(name): Position changed")
         }
-        
-        print("\(name): Position changed")
     }
     
     func land() {
-        self.currentPosition = Position(distanceFromRunway: 0, height: 0)
-        mediator.unregisterPeer(self)
-        
-        print("\(name) landed")
+        queue.sync(flags: DispatchWorkItemFlags.barrier) {
+            self.currentPosition = Position(distanceFromRunway: 0, height: 0)
+            mediator.unregisterPeer(self)
+            
+            print("\(name) landed")
+        }
     }
 }

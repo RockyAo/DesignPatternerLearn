@@ -23,27 +23,36 @@ class AirplaneMediator : Mediator {
     
     private var peers:[String:Peer]
     
+    private let writeQueue:DispatchQueue = DispatchQueue(label: "writeQ", qos: DispatchQoS.default, attributes: DispatchQueue.Attributes.concurrent)
+    
     init() {
         peers = [String:Peer]()
     }
     
     func registerPeer(_ peer: Peer) {
-        self.peers[peer.name] = peer
+        writeQueue.sync(flags: DispatchWorkItemFlags.barrier) {
+            self.peers[peer.name] = peer
+        }
     }
     
     func unregisterPeer(_ peer: Peer) {
-        self.peers.removeValue(forKey: peer.name)
+        _ = writeQueue.sync(flags: DispatchWorkItemFlags.barrier) {
+            self.peers.removeValue(forKey: peer.name)
+        }
     }
     
     func changePosition(for peer: Peer, position: Position) -> Bool {
+        var result = false
         
-        for storedPeer in peers.values{
-            if peer.name != storedPeer.name && storedPeer.otherPlaneDidChangePosition(position){
-                return true
+        writeQueue.sync {
+            for storedPeer in peers.values{
+                if peer.name != storedPeer.name && storedPeer.otherPlaneDidChangePosition(position){
+                    result = true
+                }
             }
         }
         
-        return false
+        return result
     }
     
 }
