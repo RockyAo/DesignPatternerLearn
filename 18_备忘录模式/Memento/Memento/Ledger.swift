@@ -20,44 +20,55 @@ class LedgerEntry {
     }
 }
 
-class LedgerCommand {
-    private let instructions:(Ledger)->Void
-    private let receiver:Ledger
+class LedgerMemento: Memento {
+    private var entries = [LedgerEntry]()
+    private let total:Float
+    private let nextId:Int
     
-    init(instructions:@escaping (Ledger)->Void,receiver:Ledger) {
-        self.instructions = instructions
-        self.receiver = receiver
+    init(ledger:Ledger) {
+        self.entries = ledger.entries.values.map{ return $0 }
+        self.total = ledger.total
+        self.nextId = ledger.nexId
     }
     
-    func excute() {
-        self.instructions(self.receiver)
+    func apply(ledger:Ledger)  {
+        ledger.total = self.total
+        ledger.nexId = self.nextId
+        ledger.entries.removeAll(keepingCapacity: true)
+        
+        entries.forEach { (entry) in
+            ledger.entries[entry.id] = entry
+        }
     }
 }
 
-class Ledger {
+
+class Ledger : Originator{
     
-    private var entries = [Int:LedgerEntry]()
-    private var nexId = 1
+    
+    fileprivate var entries = [Int:LedgerEntry]()
+    fileprivate var nexId = 1
+    
     var total:Float = 0
     
-    @discardableResult
-    func addEntry(counterParty:String,amount:Float) -> LedgerCommand {
+    func addEntry(counterParty:String,amount:Float)  {
         nexId += 1
         let entry = LedgerEntry(id: nexId, counterParty: counterParty, amount: amount)
         entries[entry.id] = entry
         total += amount
-        return createUndoCommand(entry: entry)
+        
     }
     
-    func createUndoCommand(entry:LedgerEntry) -> LedgerCommand {
-        return LedgerCommand(instructions: { (target) in
-            
-            if let removed = target.entries.removeValue(forKey: entry.id) {
-                target.total -= removed.amount
-            }
-            
-        }, receiver: self)
+    func createMemento() -> Memento {
+        return LedgerMemento(ledger: self)
     }
+    
+    func applyMemento(_ memento: Memento) {
+        if let m = memento as? LedgerMemento{
+            m.apply(ledger: self)
+        }
+    }
+    
     
     func printEntries()  {
         for id in entries.keys.sorted(by: <){

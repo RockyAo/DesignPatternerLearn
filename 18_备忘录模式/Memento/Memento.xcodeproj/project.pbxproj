@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C140210201CCC0B00C6BEC6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14020F201CCC0B00C6BEC6 /* main.swift */; };
 		5C140217201CCC1500C6BEC6 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C140216201CCC1500C6BEC6 /* Ledger.swift */; };
+		5C140219201E031300C6BEC6 /* Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C140218201E031300C6BEC6 /* Memento.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		5C14020C201CCC0B00C6BEC6 /* Memento */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Memento; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C14020F201CCC0B00C6BEC6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5C140216201CCC1500C6BEC6 /* Ledger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
+		5C140218201E031300C6BEC6 /* Memento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memento.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				5C14020F201CCC0B00C6BEC6 /* main.swift */,
 				5C140216201CCC1500C6BEC6 /* Ledger.swift */,
+				5C140218201E031300C6BEC6 /* Memento.swift */,
 			);
 			path = Memento;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C140219201E031300C6BEC6 /* Memento.swift in Sources */,
 				5C140217201CCC1500C6BEC6 /* Ledger.swift in Sources */,
 				5C140210201CCC0B00C6BEC6 /* main.swift in Sources */,
 			);
