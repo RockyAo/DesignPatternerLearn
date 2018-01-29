@@ -9,6 +9,17 @@
 import Foundation
 
 let shapes = ShapeCollection()
-let area = shapes.calculateAreas()
-print("Area : \(area)")
+//let area = shapes.calculateAreas()
+//print("Area : \(area)")
+let areaVisitor = AreaVisitor()
 
+shapes.accept(visitor: areaVisitor)
+
+print("Arear :\(areaVisitor.totalArea)")
+
+print("--------")
+
+let edgeVisitor = EdgesVisitor()
+shapes.accept(visitor: edgeVisitor)
+
+print("Edge :\(edgeVisitor.totalEdges)")
