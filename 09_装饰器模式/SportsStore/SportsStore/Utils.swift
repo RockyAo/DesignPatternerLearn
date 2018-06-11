@@ -6,5 +6,7 @@ class Utils {
         let formatter = NumberFormatter();
         formatter.numberStyle = .currency;
         return formatter.string(for: number) ?? ""
+        
+
     }
 }
