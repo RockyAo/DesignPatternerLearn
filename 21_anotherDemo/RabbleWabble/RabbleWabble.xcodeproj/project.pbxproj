@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1B6D5520CFBAC200ED837A /* SelectQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1B6D5420CFBAC200ED837A /* SelectQuestionGroupViewController.swift */; };
+		5C1B6D5720CFBC3E00ED837A /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1B6D5620CFBC3E00ED837A /* QuestionGroupCell.swift */; };
 		5CD5613120CEB2AB00814523 /* RabbleWabbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD5613020CEB2AB00814523 /* RabbleWabbleTests.swift */; };
 		5CD5613C20CEB2AB00814523 /* RabbleWabbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD5613B20CEB2AB00814523 /* RabbleWabbleUITests.swift */; };
 		5CD5615620CEB33B00814523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD5614D20CEB33B00814523 /* Main.storyboard */; };
-		5CD5615820CEB33B00814523 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CD5615120CEB33B00814523 /* Info.plist */; };
 		5CD5615920CEB33B00814523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD5615320CEB33B00814523 /* AppDelegate.swift */; };
 		5CD5615B20CEB3C400814523 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD5615A20CEB3C400814523 /* QuestionViewController.swift */; };
 		5CD5615D20CEB3D700814523 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD5615C20CEB3D700814523 /* Question.swift */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C1B6D5420CFBAC200ED837A /* SelectQuestionGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionGroupViewController.swift; sourceTree = "<group>"; };
+		5C1B6D5620CFBC3E00ED837A /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
 		5CD5611820CEB2A700814523 /* RabbleWabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RabbleWabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD5612C20CEB2AB00814523 /* RabbleWabbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RabbleWabbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD5613020CEB2AB00814523 /* RabbleWabbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbleWabbleTests.swift; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				5CD5615A20CEB3C400814523 /* QuestionViewController.swift */,
+				5C1B6D5420CFBAC200ED837A /* SelectQuestionGroupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +151,7 @@
 				5CD5616420CEB4C200814523 /* LaunchScreen.storyboard */,
 				5CD5614D20CEB33B00814523 /* Main.storyboard */,
 				5CD5616620CEB59200814523 /* QuestionView.swift */,
+				5C1B6D5620CFBC3E00ED837A /* QuestionGroupCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,7 +246,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Rocky;
 				TargetAttributes = {
 					5CD5611720CEB2A700814523 = {
@@ -285,7 +290,6 @@
 				5CD5615620CEB33B00814523 /* Main.storyboard in Resources */,
 				5CD5616520CEB4C300814523 /* LaunchScreen.storyboard in Resources */,
 				5CD5616320CEB49F00814523 /* Assets.xcassets in Resources */,
-				5CD5615820CEB33B00814523 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +320,8 @@
 				5CD5615F20CEB40D00814523 /* QuestionGroup.swift in Sources */,
 				5CD5616720CEB59200814523 /* QuestionView.swift in Sources */,
 				5CD5616120CEB48200814523 /* QuestionGroupData.swift in Sources */,
+				5C1B6D5520CFBAC200ED837A /* SelectQuestionGroupViewController.swift in Sources */,
+				5C1B6D5720CFBC3E00ED837A /* QuestionGroupCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
