@@ -12,6 +12,8 @@
 		5C1B6F7820CFF8A100ED837A /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1B6F7720CFF8A100ED837A /* QuestionStrategy.swift */; };
 		5C1B6F7A20CFF96C00ED837A /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1B6F7920CFF96C00ED837A /* SequentialQuestionStrategy.swift */; };
 		5C1B6F7C20CFFAAA00ED837A /* RandomQuestionStategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1B6F7B20CFFAAA00ED837A /* RandomQuestionStategy.swift */; };
+		5C1B6F7F20D0076C00ED837A /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1B6F7E20D0076C00ED837A /* AppSettings.swift */; };
+		5C1B6F8120D00A9100ED837A /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1B6F8020D00A9100ED837A /* AppSettingsViewController.swift */; };
 		5CD5613120CEB2AB00814523 /* RabbleWabbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD5613020CEB2AB00814523 /* RabbleWabbleTests.swift */; };
 		5CD5613C20CEB2AB00814523 /* RabbleWabbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD5613B20CEB2AB00814523 /* RabbleWabbleUITests.swift */; };
 		5CD5615620CEB33B00814523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD5614D20CEB33B00814523 /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		5C1B6F7720CFF8A100ED837A /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
 		5C1B6F7920CFF96C00ED837A /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
 		5C1B6F7B20CFFAAA00ED837A /* RandomQuestionStategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStategy.swift; sourceTree = "<group>"; };
+		5C1B6F7E20D0076C00ED837A /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		5C1B6F8020D00A9100ED837A /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		5CD5611820CEB2A700814523 /* RabbleWabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RabbleWabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD5612C20CEB2AB00814523 /* RabbleWabbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RabbleWabbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD5613020CEB2AB00814523 /* RabbleWabbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbleWabbleTests.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 			children = (
 				5CD5615A20CEB3C400814523 /* QuestionViewController.swift */,
 				5C1B6D5420CFBAC200ED837A /* SelectQuestionGroupViewController.swift */,
+				5C1B6F8020D00A9100ED837A /* AppSettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				5CD5615C20CEB3D700814523 /* Question.swift */,
 				5CD5616020CEB48200814523 /* QuestionGroupData.swift */,
 				5CD5615E20CEB40D00814523 /* QuestionGroup.swift */,
+				5C1B6F7E20D0076C00ED837A /* AppSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,11 +339,13 @@
 			files = (
 				5C1B6F7A20CFF96C00ED837A /* SequentialQuestionStrategy.swift in Sources */,
 				5CD5615D20CEB3D700814523 /* Question.swift in Sources */,
+				5C1B6F7F20D0076C00ED837A /* AppSettings.swift in Sources */,
 				5CD5615B20CEB3C400814523 /* QuestionViewController.swift in Sources */,
 				5CD5615920CEB33B00814523 /* AppDelegate.swift in Sources */,
 				5CD5615F20CEB40D00814523 /* QuestionGroup.swift in Sources */,
 				5CD5616720CEB59200814523 /* QuestionView.swift in Sources */,
 				5CD5616120CEB48200814523 /* QuestionGroupData.swift in Sources */,
+				5C1B6F8120D00A9100ED837A /* AppSettingsViewController.swift in Sources */,
 				5C1B6F7C20CFFAAA00ED837A /* RandomQuestionStategy.swift in Sources */,
 				5C1B6D5520CFBAC200ED837A /* SelectQuestionGroupViewController.swift in Sources */,
 				5C1B6F7820CFF8A100ED837A /* QuestionStrategy.swift in Sources */,
