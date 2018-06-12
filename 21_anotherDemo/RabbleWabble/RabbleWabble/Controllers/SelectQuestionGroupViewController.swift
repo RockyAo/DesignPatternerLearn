@@ -52,19 +52,22 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
     
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let viewController =  segue.destination as? QuestionViewController else { return }
-        viewController.questionGroup = selectedQuestionGroup
+//        viewController.questionGroup = selectedQuestionGroup
+//        viewController.questionStategy = RandomQuestionStrategy(questionGroup: selectedQuestionGroup)
+        viewController.questionStategy = SequentialQuestionStategy(questionGroup: selectedQuestionGroup)
+        
         viewController.delegate = self
     }
 }
 
 extension SelectQuestionGroupViewController: QuestionViewControllerDelegate{
     
-    func questionViewController(_ viewController: QuestionViewController, didCancel questionGroup: QuestionGroup, at questionIndex: Int) {
+    func questionViewController(_ viewController: QuestionViewController, didCancel questionGroup: QuestionStrategy, at questionIndex: Int) {
         
         navigationController?.popViewController(animated: true)
     }
     
-    func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionGroup) {
+    func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionStrategy) {
         
         navigationController?.popToViewController(self, animated: true)
     }
