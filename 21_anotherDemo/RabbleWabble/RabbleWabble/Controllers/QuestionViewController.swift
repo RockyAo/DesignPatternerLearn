@@ -103,13 +103,10 @@ public class QuestionViewController: UIViewController {
     }
     
     private func showNextQuestion() {
-        questionIndex += 1
         guard questionStategy.advanceToNextQuestion() else {
-            delegate?.questionViewController(self,
-                                             didComplete: questionStategy)
+            delegate?.questionViewController(self, didComplete: questionStategy)
             return
         }
-        
         showQuestion()
     }
 }

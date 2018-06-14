@@ -16,14 +16,25 @@ public class SelectQuestionGroupViewController: UIViewController {
         }
     }
     
-    public let questionGroups = QuestionGroup.allGroups()
-    private var selectedQuestionGroup: QuestionGroup!
+    private let questionGroupCaretaker = QuestionGroupCaretaker()
     
-    private let appSetting = AppSetting.shared
+    public var questionGroups: [QuestionGroup] {
+        return questionGroupCaretaker.questionGroups
+    }
+    
+    private var selectedQuestionGroup: QuestionGroup! {
+        get { return questionGroupCaretaker.selectedQuestionGroup }
+        set { questionGroupCaretaker.selectedQuestionGroup = newValue }
+    }
+    
+    private let appSetting = AppSettings.shared
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        questionGroups.forEach {
+            print("\($0.title): " + "correctCount \($0.score.correctCount)" + "incorrectCount: \($0.score.incorrectCount)")
+        }
     }
     
 }
@@ -57,7 +68,7 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
 //        viewController.questionGroup = selectedQuestionGroup
 //        viewController.questionStategy = RandomQuestionStrategy(questionGroup: selectedQuestionGroup)
 //        viewController.questionStategy = SequentialQuestionStategy(questionGroup: selectedQuestionGroup)
-        viewController.questionStategy = appSetting.questionStrategy(for: selectedQuestionGroup)
+        viewController.questionStategy = appSetting.questionStrategy(for: questionGroupCaretaker)
         viewController.delegate = self
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 public class AppSettingsViewController: UITableViewController {
 
-    public let appSettings = AppSetting.shared
+    public let appSettings = AppSettings.shared
     private let cellIdentifier = "basicCell"
     
     override public func viewDidLoad() {
