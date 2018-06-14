@@ -14,6 +14,7 @@
 		5C1B6F7C20CFFAAA00ED837A /* RandomQuestionStategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1B6F7B20CFFAAA00ED837A /* RandomQuestionStategy.swift */; };
 		5C1B6F7F20D0076C00ED837A /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1B6F7E20D0076C00ED837A /* AppSettings.swift */; };
 		5C1B6F8120D00A9100ED837A /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1B6F8020D00A9100ED837A /* AppSettingsViewController.swift */; };
+		5C5AF47120D2B66F00A89917 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5AF47020D2B66F00A89917 /* Observable.swift */; };
 		5CD5613120CEB2AB00814523 /* RabbleWabbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD5613020CEB2AB00814523 /* RabbleWabbleTests.swift */; };
 		5CD5613C20CEB2AB00814523 /* RabbleWabbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD5613B20CEB2AB00814523 /* RabbleWabbleUITests.swift */; };
 		5CD5615620CEB33B00814523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD5614D20CEB33B00814523 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		5C1B6F7B20CFFAAA00ED837A /* RandomQuestionStategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStategy.swift; sourceTree = "<group>"; };
 		5C1B6F7E20D0076C00ED837A /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		5C1B6F8020D00A9100ED837A /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
+		5C5AF47020D2B66F00A89917 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		5CD5611820CEB2A700814523 /* RabbleWabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RabbleWabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD5612C20CEB2AB00814523 /* RabbleWabbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RabbleWabbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD5613020CEB2AB00814523 /* RabbleWabbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbleWabbleTests.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				5CD5615C20CEB3D700814523 /* Question.swift */,
 				5CD5615E20CEB40D00814523 /* QuestionGroup.swift */,
 				5C1B6F7E20D0076C00ED837A /* AppSettings.swift */,
+				5C5AF47020D2B66F00A89917 /* Observable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C5AF47120D2B66F00A89917 /* Observable.swift in Sources */,
 				5C1B6F7A20CFF96C00ED837A /* SequentialQuestionStrategy.swift in Sources */,
 				5CD6E23620D172A50095D94F /* BaseQuestionStrategy.swift in Sources */,
 				5CD5615D20CEB3D700814523 /* Question.swift in Sources */,
