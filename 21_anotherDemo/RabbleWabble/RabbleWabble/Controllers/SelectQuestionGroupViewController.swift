@@ -69,12 +69,14 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
     }
     
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let viewController =  segue.destination as? QuestionViewController else { return }
-//        viewController.questionGroup = selectedQuestionGroup
-//        viewController.questionStategy = RandomQuestionStrategy(questionGroup: selectedQuestionGroup)
-//        viewController.questionStategy = SequentialQuestionStategy(questionGroup: selectedQuestionGroup)
-        viewController.questionStategy = appSetting.questionStrategy(for: questionGroupCaretaker)
-        viewController.delegate = self
+        if let viewController =  segue.destination as? QuestionViewController {
+            viewController.questionStategy = appSetting.questionStrategy(for: questionGroupCaretaker)
+            viewController.delegate = self
+            
+        } else if let navController = segue.destination as? UINavigationController,
+                let viewController = navController.topViewController as? CreateQuestionGroupViewController {
+            viewController.delegate = self
+        }
     }
 }
 
@@ -88,6 +90,20 @@ extension SelectQuestionGroupViewController: QuestionViewControllerDelegate{
     func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionStrategy) {
         
         navigationController?.popToViewController(self, animated: true)
+    }
+}
+
+extension SelectQuestionGroupViewController: CreateQuestionGroupViewControllerDelegate{
+    
+    public func createQuestionGroupViewControllerDidCancel(_ viewController: CreateQuestionGroupViewController) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    public func createQuestionGroupViewController(_ viewController: CreateQuestionGroupViewController, created questionGroup: QuestionGroup) {
+        try? questionGroupCaretaker.save()
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
     }
 }
 
