@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		5C1A648220D7EE30005A3908 /* FactoryPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FactoryPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1B6F7520CFDFD700ED837A /* StrategyPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StrategyPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1B6F7D20D0051900ED837A /* SingletonPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C3B0F2820D0137E009D7930 /* MementoPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MementoPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -18,6 +19,7 @@
 		5C1B6F6E20CFDFC300ED837A = {
 			isa = PBXGroup;
 			children = (
+				5C1A648220D7EE30005A3908 /* FactoryPattern.playground */,
 				5C5AF47220D4014E00A89917 /* Builder Pattern.playground */,
 				5C5AF46F20D2A93900A89917 /* ObserverPattern.playground */,
 				5C3B0F2820D0137E009D7930 /* MementoPattern.playground */,
