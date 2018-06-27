@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3D317BB620E368ED00350544 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D317BB520E368ED00350544 /* MulticastDelegate.swift */; };
+		3D317BC120E3783900350544 /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D317BBF20E3783900350544 /* ImageRenderer.swift */; };
+		3D317BC220E3783900350544 /* DrawingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D317BC020E3783900350544 /* DrawingSelectionViewController.swift */; };
+		3D317BC420E3785800350544 /* DrawingSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D317BC320E3785800350544 /* DrawingSelectionViewController.xib */; };
+		3D317BC620E3788200350544 /* ShareFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D317BC520E3788200350544 /* ShareFacade.swift */; };
 		424387E420449D300056B653 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424387E320449D300056B653 /* DrawView.swift */; };
 		424387E72044A1ED0056B653 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424387E62044A1ED0056B653 /* LineShape.swift */; };
 		4245EC7B2074415400E347D0 /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4245EC7A2074415400E347D0 /* Copying.swift */; };
@@ -25,6 +29,10 @@
 
 /* Begin PBXFileReference section */
 		3D317BB520E368ED00350544 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		3D317BBF20E3783900350544 /* ImageRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
+		3D317BC020E3783900350544 /* DrawingSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingSelectionViewController.swift; sourceTree = "<group>"; };
+		3D317BC320E3785800350544 /* DrawingSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawingSelectionViewController.xib; sourceTree = "<group>"; };
+		3D317BC520E3788200350544 /* ShareFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFacade.swift; sourceTree = "<group>"; };
 		424387E320449D300056B653 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		424387E62044A1ED0056B653 /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
 		4245EC7A2074415400E347D0 /* Copying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = "<group>"; };
@@ -53,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D317BBE20E3783900350544 /* Facades */ = {
+			isa = PBXGroup;
+			children = (
+				3D317BBF20E3783900350544 /* ImageRenderer.swift */,
+				3D317BC020E3783900350544 /* DrawingSelectionViewController.swift */,
+				3D317BC520E3788200350544 /* ShareFacade.swift */,
+			);
+			path = Facades;
+			sourceTree = "<group>";
+		};
 		4245EC792074415400E347D0 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +78,6 @@
 				3D317BB520E368ED00350544 /* MulticastDelegate.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		4245EC7C2074417100E347D0 /* Facades */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Facades;
 			sourceTree = "<group>";
 		};
 		42F35C2920449C9A00584FAD = {
@@ -90,7 +101,7 @@
 			children = (
 				42F35C4720449C9D00584FAD /* AppDelegate */,
 				42F35C4820449CA300584FAD /* Controllers */,
-				4245EC7C2074417100E347D0 /* Facades */,
+				3D317BBE20E3783900350544 /* Facades */,
 				4245EC792074415400E347D0 /* Protocols */,
 				42F35C4A20449CB400584FAD /* Resources */,
 				42F35C4920449CAA00584FAD /* Views */,
@@ -117,6 +128,7 @@
 		42F35C4920449CAA00584FAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3D317BC320E3785800350544 /* DrawingSelectionViewController.xib */,
 				5CF3407520E2858A00998C55 /* DrawView */,
 				42F35C3E20449C9A00584FAD /* LaunchScreen.storyboard */,
 				42F35C3920449C9A00584FAD /* Main.storyboard */,
@@ -214,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D317BC420E3785800350544 /* DrawingSelectionViewController.xib in Resources */,
 				42F35C4020449C9A00584FAD /* LaunchScreen.storyboard in Resources */,
 				42F35C3D20449C9A00584FAD /* Assets.xcassets in Resources */,
 				42F35C3B20449C9A00584FAD /* Main.storyboard in Resources */,
@@ -228,9 +241,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF3407A20E285CD00998C55 /* AnimateState.swift in Sources */,
+				3D317BC620E3788200350544 /* ShareFacade.swift in Sources */,
 				42F35C3820449C9A00584FAD /* ViewController.swift in Sources */,
 				5CF3407E20E285DE00998C55 /* CopyState.swift in Sources */,
 				424387E72044A1ED0056B653 /* LineShape.swift in Sources */,
+				3D317BC120E3783900350544 /* ImageRenderer.swift in Sources */,
+				3D317BC220E3783900350544 /* DrawingSelectionViewController.swift in Sources */,
 				5CF3408020E285ED00998C55 /* DrawViewState.swift in Sources */,
 				5CF3407C20E285D500998C55 /* ClearState.swift in Sources */,
 				4245EC7B2074415400E347D0 /* Copying.swift in Sources */,

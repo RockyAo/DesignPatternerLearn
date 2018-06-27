@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		3D317BB420E337AD00350544 /* MulticastDelegatePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MulticastDelegatePattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3D317BB720E3714600350544 /* FacadePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FacadePattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1A648220D7EE30005A3908 /* FactoryPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FactoryPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1A648320D94DB5005A3908 /* AdapterPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AdapterPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1A648420DA9603005A3908 /* IteratorPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = IteratorPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -24,6 +25,7 @@
 		5C1B6F6E20CFDFC300ED837A = {
 			isa = PBXGroup;
 			children = (
+				3D317BB720E3714600350544 /* FacadePattern.playground */,
 				3D317BB420E337AD00350544 /* MulticastDelegatePattern.playground */,
 				5C1A648620E27B47005A3908 /* StatePattern.playground */,
 				5C1A648520E133A6005A3908 /* PrototypePattern.playground */,
