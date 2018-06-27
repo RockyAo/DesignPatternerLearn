@@ -28,6 +28,11 @@
 
 import UIKit
 
+@objc public protocol DrawViewDelegate: class {
+    func drawView(_ source: DrawView, didAddLine line: LineShape)
+    func drawView(_ source: DrawView, didAddPoint point: CGPoint)
+}
+
 public class DrawView: UIView {
   
   // MARK: - Instance Properties
@@ -45,6 +50,16 @@ public class DrawView: UIView {
     ]
     
     public lazy var currentState = states[AcceptInputState.identifier]!
+    
+    public let multicastDelegate = MulticastDelegate<DrawViewDelegate>()
+    
+    public func add(delegate: DrawViewDelegate) {
+        multicastDelegate.addDelegate(delegate)
+    }
+    
+    public func remove(delegate: DrawViewDelegate) {
+        multicastDelegate.removeDelegate(delegate)
+    }
     
   @IBInspectable public var scaleX: CGFloat = 1 {
     didSet { applyTransform() }
@@ -81,5 +96,14 @@ public class DrawView: UIView {
     public func copyLines(from source: DrawView) {
 
         currentState.copyLines(from: source)
+    }
+}
+
+extension DrawView: DrawViewDelegate {
+    public func drawView(_ source: DrawView, didAddPoint point: CGPoint) {
+        currentState.drawView(source, didAddPoint: point)
+    }
+    public func drawView(_ source: DrawView, didAddLine line: LineShape) {
+        currentState.drawView(source, didAddLine: line)
     }
 }
