@@ -18,6 +18,7 @@
 		5C1A648520E133A6005A3908 /* PrototypePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PrototypePattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1A648620E27B47005A3908 /* StatePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StatePattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1A648720E3DC7B005A3908 /* FlyweightPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FlyweightPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		5C1A648820E52883005A3908 /* Chain-of-ResponsibilityPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Chain-of-ResponsibilityPattern.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1B6F7520CFDFD700ED837A /* StrategyPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StrategyPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1B6F7D20D0051900ED837A /* SingletonPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C3B0F2820D0137E009D7930 /* MementoPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MementoPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -29,6 +30,7 @@
 		5C1B6F6E20CFDFC300ED837A = {
 			isa = PBXGroup;
 			children = (
+				5C1A648820E52883005A3908 /* Chain-of-ResponsibilityPattern.playground */,
 				3D317DC920E4D84500350544 /* CommandPattern.playground */,
 				5C1A648320D94DB5005A3908 /* AdapterPattern.playground */,
 				5C5AF47220D4014E00A89917 /* Builder Pattern.playground */,
