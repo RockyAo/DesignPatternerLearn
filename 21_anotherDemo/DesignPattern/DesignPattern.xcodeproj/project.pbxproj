@@ -11,6 +11,7 @@
 		3D317BB720E3714600350544 /* FacadePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FacadePattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3D317DB420E48C8600350544 /* MediatorPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MediatorPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3D317DC820E4C5D800350544 /* CompositePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CompositePattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3D317DC920E4D84500350544 /* CommandPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CommandPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1A648220D7EE30005A3908 /* FactoryPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FactoryPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1A648320D94DB5005A3908 /* AdapterPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AdapterPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5C1A648420DA9603005A3908 /* IteratorPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = IteratorPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -28,6 +29,7 @@
 		5C1B6F6E20CFDFC300ED837A = {
 			isa = PBXGroup;
 			children = (
+				3D317DC920E4D84500350544 /* CommandPattern.playground */,
 				5C1A648320D94DB5005A3908 /* AdapterPattern.playground */,
 				5C5AF47220D4014E00A89917 /* Builder Pattern.playground */,
 				3D317DC820E4C5D800350544 /* CompositePattern.playground */,
